@@ -151,6 +151,19 @@ textarea::placeholder {
   color: #AEADAF;
   font-size: 13px;
 }
+
+.output {
+  margin-top: 20px;
+}
+
+.output span {
+  margin: 0 1%;
+  padding: 10px 3%;
+  background-color: #FA9625;
+  border-radius: 25px;
+  font-size: 15px;
+  text-transform: none;
+}
 /*=================================
   main styling ends here
 =================================*/
