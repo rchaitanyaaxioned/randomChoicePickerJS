@@ -103,52 +103,57 @@ li {
   width: 86%; 
   margin: 0 auto;
 }
-/*=================================
-  Header styling starts here
-=================================*/
 
-
-
-
-
-
-/*=================================
-  Header styling ends here
-=================================*/  
-
+/*for full heaight*/
+html, body, .container, main {
+  height: 100%;
+  background-color: #2385F6;
+  color: #FFF;
+}
 /*=================================
   main styling starts here
 =================================*/
+.wrapper {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
 
+.picker-container {
+  text-align: center;
+}
 
+.picker-container p::first-letter {
+  text-transform: capitalize;
+}
 
+.line-break::before {
+  content: "\a";
+  white-space: pre;
+}
 
+.picker-container span {
+  text-transform: capitalize;
+}
 
+textarea {
+  max-height: 150px;
+  max-width: 100%;
+  padding: 5px 1%;
+  margin-top: 15px;
+  border: none;
+  color: #392F29;
+}
 
-
-
+textarea::placeholder {
+  color: #AEADAF;
+  font-size: 13px;
+}
 /*=================================
   main styling ends here
 =================================*/
-
-/*=================================
-  footer styling starts here
-=================================*/ 
-
-
-
-
-
-
-
- /*=================================
-  footer styling ends here
-=================================*/ 
-
 /*media query starts*/
 /*media query for 995px starts here*/
-@media only screen and (max-width: 995px) {
-
-
-
-}  
+@media only screen and (max-width: 995px) {}  
