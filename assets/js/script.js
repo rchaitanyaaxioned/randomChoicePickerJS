@@ -1,21 +1,28 @@
 var inputDiv = document.querySelector(".input");
-var textArea = document.getElementsByTagName("textarea");
+var textArea = document.querySelector(".text-area");
+var outputDiv = document.querySelector(".output");
 
 textArea.onkeydown = function (event) {
-  alert("Fun Called!")
-  var eventKey = event.key;
-  console.log("eventKey : " + eventKey);
+  var eventKeyCode = event.which;
+  if (eventKeyCode === 13) {
+    let textContent = textArea.value;
+    stringSplit(textContent);
+  }
 }
 
+function stringSplit(textContent) {
+  const inputArr = textContent.split(",");
+  // outputDiv.innerHTML = inputArr;
 
-// function (event) {
-//   var keycode = event.keyCode;
+  inputArr.forEach(arrIterator)
 
-//   if (keycode === 38) {
-//     moveUp();
-//   }
-// }
-
+  function arrIterator(item, index) {
+    let span = document.createElement("span");
+    span.innerText = item;
+    outputDiv.appendChild(span);
+    //console.log("item : " + item + "," + "index : " + index);
+  }
+}
 
 
 
