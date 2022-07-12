@@ -6,39 +6,26 @@ var newStr;
 textArea.addEventListener('keypress', onKeyPress);
 
 function onKeyPress() {
-  var tAContent = textArea.value;
-  // var newStr = "";
-  // newStr = tAContent;
-  // console.log(newStr);
+  let txtContent = textArea.value.trim();
 
-  // var splitStr = tAContent.split(",");
-  // console.log("splitStr : " + splitStr);
+  const splitArr = txtContent.split(",");
 
-  var inputArr = tAContent.split(",");
-
-  // console.log(inputArr);
-
-  stringSplit(inputArr);
-
-  // if (eventKeyCode === 13) {
-  //   stringSplit(inputArr);
-  // }
+  stringSplit(splitArr);
 }
 
 function stringSplit(arr) {
 
+  outputDiv.innerHTML = "";
+
   arr.forEach(arrIterator);
 
   function arrIterator(item, index, array) {
-    // console.log(item + "," + index);
-
-    //let newItem = array[index];
-
     let span = document.createElement("span");
-    span.innerText = item;
+    span.innerText = item.trim();
     outputDiv.appendChild(span);
   }
 }
+
 
 
 
