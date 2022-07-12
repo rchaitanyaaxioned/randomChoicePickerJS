@@ -154,6 +154,8 @@ textarea::placeholder {
 
 .output {
   margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .output span {
